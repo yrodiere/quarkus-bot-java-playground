@@ -5,19 +5,19 @@ buckets:
   triage:
     label: "triage/needs-triage"
     delay: PT0S
-    timeout: P3D
+    timeout: PT5M
   maintenance:
     reproducer:
       label: "needs-reproducer"
       needed:
-        delay: P21D
-        timeout: P3D
+        delay: PT1M
+        timeout: PT5M
       provided:
-        delay: P7D
-        timeout: P3D
+        delay: PT1M
+        timeout: PT5M
     stale:
-      delay: P60D
-      timeout: P14D
+      delay: PT2M
+      timeout: PT5M
 participants:
   - username: "yrodiere"
     timezone: "Europe/Paris"
