@@ -7,8 +7,8 @@ buckets:
     delay: PT0S
     timeout: PT5M
   maintenance:
-    reproducer:
-      label: "needs-reproducer"
+    feedback:
+      labels: ["triage/needs-feedback","triage/needs-reproducer"]
       needed:
         delay: PT1M
         timeout: PT5M
@@ -30,7 +30,7 @@ participants:
     maintenance:
       labels: ["area/hibernate-orm", "area/hibernate-search"]
       days: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"]
-      reproducer:
+      feedback:
         needed:
           maxIssues: 4
         provided:
