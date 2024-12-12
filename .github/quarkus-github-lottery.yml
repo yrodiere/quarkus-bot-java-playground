@@ -7,7 +7,7 @@ buckets:
     delay: PT0S
     timeout: PT5M
   maintenance:
-    reported:
+    created:
       delay: PT0S
       timeout: PT5M
       expiry: PT10M
@@ -37,7 +37,7 @@ participants:
     maintenance:
       labels: ["area/hibernate-orm", "area/hibernate-search"]
       days: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"]
-      reported:
+      created:
         maxIssues: 5
       feedback:
         needed:
