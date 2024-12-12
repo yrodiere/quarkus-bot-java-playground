@@ -2,16 +2,16 @@ notifications:
   createIssues:
     repository: "yrodiere/quarkus-github-playground-lottery-reports"
 buckets:
-  reported:
-    delay: PT0S
-    timeout: PT5M
-    expiry: PT10M
-    ignoreLabels: ["triage/on-ice"]
   triage:
     label: "triage/needs-triage"
     delay: PT0S
     timeout: PT5M
   maintenance:
+    reported:
+      delay: PT0S
+      timeout: PT5M
+      expiry: PT10M
+      ignoreLabels: ["triage/on-ice"]
     feedback:
       labels: ["triage/needs-feedback","triage/needs-reproducer"]
       needed:
