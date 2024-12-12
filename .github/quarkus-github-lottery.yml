@@ -2,6 +2,11 @@ notifications:
   createIssues:
     repository: "yrodiere/quarkus-github-playground-lottery-reports"
 buckets:
+  reported:
+    delay: PT0S
+    timeout: PT5M
+    expiry: PT10M
+    ignoreLabels: ["triage/on-ice"]
   triage:
     label: "triage/needs-triage"
     delay: PT0S
@@ -18,9 +23,11 @@ buckets:
     stale:
       delay: PT2M
       timeout: PT5M
+      ignoreLabels: ["triage/on-ice"]
   stewardship:
     delay: PT2M
     timeout: PT5M
+    ignoreLabels: ["triage/on-ice"]
 participants:
   - username: "yrodiere"
     timezone: "Europe/Paris"
@@ -30,6 +37,8 @@ participants:
     maintenance:
       labels: ["area/hibernate-orm", "area/hibernate-search"]
       days: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY"]
+      reported:
+        maxIssues: 5
       feedback:
         needed:
           maxIssues: 4
